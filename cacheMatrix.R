@@ -1,6 +1,8 @@
-#
-# Functions to access matrix and its inverse
-#
+##
+## Functions to create a cached inverse matrix object
+##
+
+## Accessing matrix and its inverse
 makeCacheMatrix <- function(x = matrix()) {
   invMatrix <- NULL
   set <- function(y) {
@@ -19,10 +21,8 @@ makeCacheMatrix <- function(x = matrix()) {
   )
 }
 
-# 
-# Function that retrieve cached inverse matrix if it was computed or
-# compute inverse matrix and store it otherwise.
-# 
+# Retrieving cached inverse matrix if it was computed or
+# computing inverse matrix and storing it otherwise
 cacheSolve <- function(x, ...) {
   inv <- x$getinv()
   if(!is.null(inv)) {
